@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Board</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">A LITTLE PROGRESS, EVERY DAY</p>
+      <h1>Study Board<span>.</span></h1>
+      <p class="intro">Big ideas start with one small topic. What will you learn next?</p>
+    </header>
+
+    <section class="board" aria-labelledby="board-title">
+      <div class="board-heading">
+        <h2 id="board-title">My learning list</h2>
+        <span class="tag">ONE STEP AT A TIME</span>
+      </div>
+      <form id="task-form">
+        <label for="task-input">Add a topic</label>
+        <div class="input-row">
+          <input id="task-input" placeholder="e.g. Build my first web page" maxlength="120" required>
+          <button type="submit">Add topic <span aria-hidden="true">+</span></button>
+        </div>
+      </form>
+      <p id="empty-message">Your next chapter starts here. Add your first topic above.</p>
+      <ul id="task-list" aria-label="Learning topics"></ul>
+      <p id="status" class="sr-only" role="status"></p>
+    </section>
+    <footer>Make room for curiosity. <span>Topics reset when you refresh.</span></footer>
+  </main>
+</body>
+</html>

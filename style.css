@@ -1,0 +1,46 @@
+:root {
+  --background: #20202f;
+  --surface: #29283d;
+  --text: #faf7ed;
+  --muted: #bdb8d2;
+  --accent: #ff947b;
+  --border: #555168;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+main { max-width: 840px; margin: 0 auto; padding: 72px 24px 32px; }
+.eyebrow { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+h1 { margin: 12px 0; font-size: clamp(40px, 8vw, 72px); line-height: 1.1; letter-spacing: -3px; }
+h1 span { color: var(--accent); }
+.intro { color: var(--muted); max-width: 490px; margin-bottom: 36px; }
+.board { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--accent); padding: 28px; border-radius: 8px; }
+.board-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+h2 { margin: 0; font-size: 22px; }
+.tag { color: var(--muted); font-size: 10px; letter-spacing: 1px; }
+label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+.input-row { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; background: var(--background); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 13px; font: inherit; }
+input::placeholder { color: var(--muted); }
+button { background: var(--accent); color: #20202f; border: 0; border-radius: 5px; padding: 13px 20px; font: inherit; font-weight: 700; cursor: pointer; }
+button:hover { background: #ffb39f; }
+button span { margin-left: 12px; }
+:focus-visible { outline: 3px solid #a8d5ff; outline-offset: 3px; }
+#empty-message { color: var(--muted); padding: 26px 0 8px; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 24px 0 0; }
+li { padding: 14px 0; border-bottom: 1px solid var(--border); overflow-wrap: anywhere; }
+li::before { content: "→"; color: var(--accent); margin-right: 14px; }
+footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; color: var(--muted); font-size: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 540px) {
+  main { padding: 40px 18px 24px; }
+  .board { padding: 20px; }
+  .board-heading, footer { flex-direction: column; align-items: flex-start; }
+  .input-row { flex-direction: column; }
+}
