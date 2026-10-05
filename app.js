@@ -21,4 +21,21 @@ form.addEventListener("submit", (event) => {
   status.textContent = `Added: ${text}`;
   input.value = "";
   input.focus();
+
+
+
+  
+const deleteButton = document.createElement("button");
+deleteButton.type = "button";
+deleteButton.textContent = "Delete";
+
+deleteButton.addEventListener("click", () => {
+  item.remove();
+
+  // แสดงข้อความว่างเมื่อไม่มีหัวข้อเหลือ
+  emptyMessage.hidden = list.children.length > 0;
+  status.textContent = "Topic deleted.";
+});
+
+item.append(" ", deleteButton);
 });
