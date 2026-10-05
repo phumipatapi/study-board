@@ -1,1 +1,1 @@
-STUDY BOARD — Git workshop starter
+STUDY BOARD — Git workshop starter V1.0
